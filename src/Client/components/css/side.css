@@ -1,0 +1,38 @@
+.side-title {
+    height: 80px;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bolder;
+    font-size: 30px;
+    color: #666;
+  }
+  .side-title::before {
+    position: absolute;
+    content: "";
+    display: inline;
+    border-radius: 2px;
+    width: 40px;
+    height: 4px;
+    top: 39px;
+    left: 20px;
+    background: #666;
+  }
+  .side-title::after {
+    position: absolute;
+    content: "";
+    display: inline;
+    border-radius: 2px;
+    width: 40px;
+    height: 4px;
+    top: 39px;
+    right: 20px;
+    background: #666;
+  }
+  @media screen and (max-width: 1199px) {
+    .side-title::after,
+    .side-title::before {
+      display: none;
+    }
+  }
