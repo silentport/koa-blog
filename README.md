@@ -1,5 +1,11 @@
 # my personal blog
 
+## Addresss
+
+[http://silentport.cn](http://silentport.cn)
+
+## Technology Stack
+
 `vue` `fetch` `vuex` `vue-router` `iview` `koa` `mongodb`
 
 ## Build Setup
