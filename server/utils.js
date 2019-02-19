@@ -51,7 +51,6 @@ const promisifyModel = (MODEL_LIST) => {
     }
 
     model.remove = (args) => {
-
       return new Promise((resolve, reject) => {
         remove(args, (err) => {
           if (!err) {
@@ -79,10 +78,8 @@ const promisifyModel = (MODEL_LIST) => {
 
 // 创建schema并Promisify
 const schemaPromisify = (mongoose, schemaData) => {
-
   const schema = mongoose.Schema(schemaData);
   schema.methods.mySave = function () {
-
     return new Promise((resolve, reject) => {
       this.save(err => {
         if (!err) {
@@ -93,9 +90,7 @@ const schemaPromisify = (mongoose, schemaData) => {
       })
     })
   }
-
   return schema;
-
 }
 
 module.exports = {
