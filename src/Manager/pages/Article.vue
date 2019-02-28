@@ -144,6 +144,7 @@ export default {
       method: "GET"
     });
     this.selectData = res.data;
+    console.log(this.data)
   },
   methods: {
     changeCatagory(name) {
@@ -189,7 +190,7 @@ export default {
       } catch (msg) {
         this.$Message.error(msg);
       }
-      console.log(this.data);
+    //   console.log(this.data);
     },
     checkData() {
       const { content, title, tag, image, summary } = this.data;
@@ -206,7 +207,7 @@ export default {
     },
     edit(item) {
       console.log(item);
-      this.data = item;
+      this.data = {...item, date: new Date(item.date) };
       this.name = "addOrEdit";
     },
     async getList() {
